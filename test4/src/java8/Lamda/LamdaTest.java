@@ -93,41 +93,41 @@ public class LamdaTest {
 //		});
 		
 		
-		printPersons(
-			    roster,
-			    (Person p) -> p.getGender() == Person.Sex.MALE
-			        && p.getAge() >= 18
-			        && p.getAge() <= 35
-			);
-		
-		
-		
-		printPersonsWithPredicate(
-			    roster,
-			    p -> p.getGender() == Person.Sex.MALE
-			        && p.getAge() >= 18
-			        && p.getAge() <= 25
-			);
-	
-
-		processPersons(
-			     roster,
-			     p -> p.getGender() == Person.Sex.MALE
-			         && p.getAge() >= 18
-			         && p.getAge() <= 25,
-			     p -> p.printPerson()
-			);
-		
-	
+//		printPersons(
+//			    roster,
+//			    (Person p) -> p.getGender() == Person.Sex.MALE
+//			        && p.getAge() >= 18
+//			        && p.getAge() <= 35
+//			);
+//		
+//		
+//		
+//		printPersonsWithPredicate(
+//			    roster,
+//			    p -> p.getGender() == Person.Sex.MALE
+//			        && p.getAge() >= 18
+//			        && p.getAge() <= 25
+//			);
+//	
+//
+//		processPersons(
+//			     roster,
+//			     p -> p.getGender() == Person.Sex.MALE
+//			         && p.getAge() >= 18
+//			         && p.getAge() <= 25,
+//			     p -> p.printPerson()
+//			);
+//		
+//	
 		
 		
 		processPersonsWithFunction(
 			    roster,
 			    p -> p.getGender() == Person.Sex.MALE
 			        && p.getAge() >= 18
-			        && p.getAge() <= 25,
+			        && p.getAge() <= 35,
 			    p -> p.getEmailAddress(),
-			    email -> System.out.println(email)
+			    em -> System.out.println(em)
 			);
 		
 		
