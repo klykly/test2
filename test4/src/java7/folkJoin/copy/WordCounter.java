@@ -35,7 +35,7 @@ public class WordCounter {
         return count;
     }
 
-
+    //코어수로 하는게 좋은듯?
     private final ForkJoinPool forkJoinPool = new ForkJoinPool();
     
     Long countOccurrencesInParallel(Folder folder, String searchedWord) {
@@ -95,7 +95,7 @@ public class WordCounter {
         //Folder folder = Folder.fromDirectory(new File(args[0]));
         Folder folder = Folder.fromDirectory(new File("C:/java/java7/"));
         // final int repeatCount = Integer.decode(args[2]);
-        final int repeatCount = 2;
+        final int repeatCount = 3;
         long counts;
         long startTime;
         long stopTime;
