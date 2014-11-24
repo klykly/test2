@@ -17,4 +17,15 @@ public class WordCounter {
         }
         return count;
     }
+
+    Long countOccurrencesOnSingleThread(Folder folder, String searchedWord) {
+        long count = 0;
+        for (Folder subFolder : folder.getSubFolders()) {
+            count = count + countOccurrencesOnSingleThread(subFolder, searchedWord);
+        }
+        for (Document document : folder.getDocuments()) {
+            count = count + occurrencesCount(document, searchedWord);
+        }
+        return count;
+    }
 }
