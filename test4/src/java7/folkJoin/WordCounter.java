@@ -1,15 +1,12 @@
-package java7;
-import java.io.*;
-import java.util.*;
-import java.util.concurrent.*;
+package java7.folkJoin;
 
 public class WordCounter {
 
-    String[] wordsIn(String line) {
+    public static String[] wordsIn(String line) {
         return line.trim().split("(\\s|\\p{Punct})+");
     }
     
-    Long occurrencesCount(Document document, String searchedWord) {
+    public static Long occurrencesCount(Document document, String searchedWord) {
         long count = 0;
         for (String line : document.getLines()) {
             for (String word : wordsIn(line)) {

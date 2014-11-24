@@ -1,4 +1,4 @@
-package java7;
+package java7.folkJoin;
 
 import java.io.BufferedReader;
 import java.io.File;
