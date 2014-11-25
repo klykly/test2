@@ -24,6 +24,7 @@ public class WordCounter {
     
 /* ......................................................................................... */
     
+    //싱글 스레드용 
     Long countOccurrencesOnSingleThread(Folder folder, String searchedWord) {
         long count = 0;
         for (Folder subFolder : folder.getSubFolders()) {
