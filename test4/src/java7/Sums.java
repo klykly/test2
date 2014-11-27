@@ -36,6 +36,7 @@ public class Sums {
         ));
         
         results.add(executor.submit(new Sum(1, 1_000_000_000)));
+        results.add(executor.submit(new Sum(1, 1_000)));
         System.out.println("" + stopWatch.getElapsedTime());
 //        executor.shutdown();
         System.out.println( "" + stopWatch.getElapsedTime());
