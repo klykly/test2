@@ -50,21 +50,26 @@ public class AnnoParse {
                     try {
                         // iterates all the annotations available in the method
                         for (Annotation anno : method.getDeclaredAnnotations()) {
-                            System.out.println("Annotation in Method '"
-                                    + method + "' : " + anno);
+//                            System.out.println("Annotation in Method '"+ method + "' : @@@" + anno);
                         }
+                        
                         OnjInfo methodAnno = method
                                 .getAnnotation(OnjInfo.class);
-                        if (methodAnno.year() == "2200") {
-                            System.out.println("forever!! oraclejava, onj"+ method);
+                        if (methodAnno.year().equals("2200")) {
+//                            System.out.println("forever!! oraclejava, onj"+ method);
+                        }else{
+//                        	System.out.println("WHAT:" +method + methodAnno);
                         }
+                        
+                        System.out.println(method.invoke(null));
+                        
  
                     } catch (Throwable ex) {
                         ex.printStackTrace();
                     }
                 }else
                 {
-                	System.out.println(method.getName());
+//                	System.out.println(method.getName());
                 }
             }
         } catch (Exception e) {

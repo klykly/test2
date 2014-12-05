@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface OnjInfo{
     String name() default "oraclejava community";
-    String year() default "2007";    
+    String year() default "2200";    
     String desc() default "개발자실무교육";
 }

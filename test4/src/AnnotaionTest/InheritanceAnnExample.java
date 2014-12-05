@@ -19,8 +19,6 @@ public class InheritanceAnnExample {
   }
 }
 
-//@Description(data="SuperClass implementation")
-//@InheritedDesc(data="Testing inheritance among annotations")
 class SuperClass{
   void print(){
     System.out.println("Super class implementation");
