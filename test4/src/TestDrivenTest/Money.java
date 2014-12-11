@@ -1,6 +1,6 @@
 package TestDrivenTest;
 
-	class Money {
+	class Money implements Expression {
 	
 	protected int amount;
 	protected String currency;
@@ -35,8 +35,14 @@ package TestDrivenTest;
 		return new Money(multiplier * this.amount, currency);
 	}
 	
-	Money plus(Money money){
-		return new Money(money.amount + amount, money.currency);
+	Expression plus(Money addend){
+		return new Sum(this, addend);
+	}
+	
+	
+	public Money reduce(Bank bank, String to){
+		int rate = bank.rate(currency, to);
+		return new Money(amount/rate, to);
 	}
 
 }
