@@ -31,11 +31,12 @@ package TestDrivenTest;
 	public String toString() {
 		return "Money [amount=" + amount + ", currency=" + currency + "]";
 	}
-	Money times(int multiplier){
+	
+	public Expression times(int multiplier){
 		return new Money(multiplier * this.amount, currency);
 	}
 	
-	Expression plus(Money addend){
+	public Expression plus(Expression addend){
 		return new Sum(this, addend);
 	}
 	
