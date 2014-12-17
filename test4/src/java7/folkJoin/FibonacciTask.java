@@ -2,7 +2,6 @@ package java7.folkJoin;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
-import org.perf4j.StopWatch;
 
 public class FibonacciTask extends RecursiveTask<Long> {
 
@@ -39,7 +38,7 @@ public class FibonacciTask extends RecursiveTask<Long> {
 	  
 	  int n = 50;
 	  
-	  StopWatch stopWatch = new StopWatch();   
+//	  StopWatch stopWatch = new StopWatch();   
 	  FibonacciProblem bigProblem = new FibonacciProblem(n);
 	  
 	  FibonacciTask task = new FibonacciTask(bigProblem);
@@ -49,8 +48,8 @@ public class FibonacciTask extends RecursiveTask<Long> {
 	  long result = task.result;
 	  System.out.println("Computed Result: " + result);
 	  
-	  stopWatch.stop();
-	  System.out.println("Elapsed Time: " + stopWatch.getElapsedTime());
+//	  stopWatch.stop();
+//	  System.out.println("Elapsed Time: " + stopWatch.getElapsedTime());
 	  
 	 }
 }
