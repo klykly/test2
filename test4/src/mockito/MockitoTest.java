@@ -90,7 +90,7 @@ public class MockitoTest {
  
 		// get("name4")를 호출하면 RuntimeException 발생
 		when(testMock.get("name4")).thenThrow(new RuntimeException());
-		assertThat(testMock.get("name4"), is(RuntimeException.class));
+		assertThat(testMock.get("name4"), is( "kyu3" ));
 	}
  
 	/**
