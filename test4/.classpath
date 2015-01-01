@@ -56,6 +56,5 @@
 	<classpathentry kind="lib" path="D:/cd/tobispring/Part2/lib/slf4j-log4j12-1.6.0.jar"/>
 	<classpathentry kind="lib" path="D:/cd/tobispring/Part2/lib/transactions-essentials-all.jar"/>
 	<classpathentry kind="lib" path="D:/jar/perf4j-0.9.16.jar"/>
-	<classpathentry kind="lib" path="D:/cd/tobispring/Vol2-31/lib/com.springsource.javax.persistence-1.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
