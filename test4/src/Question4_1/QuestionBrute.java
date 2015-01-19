@@ -16,6 +16,14 @@ public class QuestionBrute {
 		if (root == null) {
 			return true;
 		}
+//		System.out.println(root.data);
+//		if( root.left != null){
+//			System.out.println("left:"+root.left.data );
+//		}
+//		
+//		if( root.right != null){
+//			System.out.println("right:"+root.right.data);
+//		}
 		int heightDiff = getHeight(root.left) - getHeight(root.right);
 		if (Math.abs(heightDiff) > 1) {
 			return false;
@@ -33,12 +41,12 @@ public class QuestionBrute {
 		System.out.println("Is balanced? " + isBalanced(root));
 		
 		// Could be balanced, actually, but it's very unlikely...
-		TreeNode unbalanced = new TreeNode(10);
-		for (int i = 0; i < 10; i++) {
-			unbalanced.insertInOrder(AssortedMethods.randomIntInRange(0, 100));
-		}
-		System.out.println("Root? " + unbalanced.data);
-		System.out.println("Is balanced? " + isBalanced(unbalanced));
+//		TreeNode unbalanced = new TreeNode(10);
+//		for (int i = 0; i < 10; i++) {
+//			unbalanced.insertInOrder(AssortedMethods.randomIntInRange(0, 100));
+//		}
+//		System.out.println("Root? " + unbalanced.data);
+//		System.out.println("Is balanced? " + isBalanced(unbalanced));
 	}
 
 }
