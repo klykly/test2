@@ -20,8 +20,14 @@ public class Sums {
         }
         
         @Override
-        public Long call() {
+        public Long call() throws InterruptedException {
             long acc = 0;
+            boolean temp = true;
+            while( temp )
+            {
+            	System.out.println("sleep...");
+            	Thread.sleep(1000);
+            }
             for (long i = from; i <= to; i++) {
                 acc = acc + i;
             }
@@ -31,7 +37,7 @@ public class Sums {
     
     public static void main(String[] args) throws Exception {
         
-        ExecutorService executor = Executors.newFixedThreadPool(2);
+        ExecutorService executor = Executors.newFixedThreadPool(1000);
         List<Future<Long>> results = executor.invokeAll(asList(
             new Sum(0, 10), new Sum(100, 1_000), new Sum(10_000, 1_000_000)
         ));
