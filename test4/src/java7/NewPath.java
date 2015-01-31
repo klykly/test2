@@ -24,6 +24,7 @@ public class NewPath {
 			Files.delete(path);
 			Files.deleteIfExists(path);
 		} catch (IOException e) {
+			e.printStackTrace();
 			System.out.println("IOException: "+e.getMessage());
 		}
 	}
