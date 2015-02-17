@@ -13,6 +13,12 @@ class StrategyExample {
 
 		context = new Context(new ConcreteStrategyMultiply());
 		int resultC = context.executeStrategy(3,4);
+
+		Strategy s = (a, b) -> a + b;
+		
+		context = new Context(s );
+		
+
 	}
 }
 
@@ -57,4 +63,6 @@ class Context {
 	public int executeStrategy(int a, int b) {
 		return strategy.execute(a, b);
 	}
+	
+
 }
